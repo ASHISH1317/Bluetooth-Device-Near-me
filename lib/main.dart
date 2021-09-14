@@ -134,7 +134,7 @@ class _BluetoothAppState extends State<BluetoothApp> {
     });
   }
 
-  // Now build the UI
+  // building  UI
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -277,12 +277,17 @@ class _BluetoothAppState extends State<BluetoothApp> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+
+
                             DropdownButton(
+
                               items: _getDeviceItems(),
                               onChanged: (value) =>
                                   setState(() => _device = value),
                               value: _devicesList.isNotEmpty ? _device : null,
                             ),
+
+
                             RaisedButton(
                               onPressed: _isButtonUnavailable
                                   ? null
